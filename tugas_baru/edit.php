@@ -16,7 +16,7 @@
                 alert("Harap isi semua kolom!");
                 return false;
             } else {
-                alert("Data Berhasil Ditambahkan");
+                alert("Data Berhasil Diedit");
                 return true;
             }
         }
@@ -24,7 +24,7 @@
     <style>
         body {
             padding: 20px;
-            background-color: lightblue;
+            background-color: lightgrey;
         }
     </style>
 </head>

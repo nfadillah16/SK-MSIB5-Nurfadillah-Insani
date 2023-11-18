@@ -15,42 +15,55 @@
             $('#datatable').DataTable();
         });
     </script>
+    <style>
+        aside {
+            background-color: grey !important;
+        }
+
+        span {
+            margin-left: 18px;
+        }
+
+        body {
+            background-color: lightgrey;
+        }
+    </style>
 </head>
 
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-                </li>
-            </ul>
-        </nav>
-        <aside class="main-sidebar sidebar-dark-primary elevation-4"
-            style="position: fixed; top: 0; left: 0; bottom: 0;">
-            <a href="#" class="brand-link">
-                <span class="brand-text font-weight-light">ADMIN ALLA CAKE</span>
-            </a>
-            <div class="sidebar">
-                <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>Dashboard</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-cog"></i>
-                                <p>Settings</p>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </aside>
+        <strong>
+            <aside class="main-sidebar sidebar-light-primary elevation-4"
+                style="position: fixed; top: 0; left: 0; bottom: 0;">
+                <center>
+                    <img src="image/admin.jpg" alt=""
+                        style="width: 150px; height: 150px; border-radius: 100%; padding: 20px; ">
+                </center>
+                <a href="#" class="brand-link">
+                    <span class="brand-text">ADMIN ALLA CAKE</span>
+                </a>
+
+                <div class="sidebar">
+                    <nav class="mt-2">
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                            data-accordion="false">
+                            <li class="nav-item">
+                                <a href="index.php" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about.php" class="nav-link">
+                                    <i class="nav-icon fas fa-cog"></i>
+                                    <p>About</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+        </strong>
         <div class="container" style="width: 80%; margin-left: 250px;">
             <div class="row">
                 <div class="col-sm-12">
@@ -63,7 +76,7 @@
                     </center>
                     <a class="btn btn-info" style="margin-bottom:5px" href="tambah.php?nama_halaman=NAMA HALAMAN NYA">
                         Tambah </a>
-                    <table id="datatable" class="table table-striped table-bordered">
+                    <table id="datatable" class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>
@@ -92,7 +105,6 @@
                         <tbody>
                             <?php
                             if (mysqli_num_rows($query) > 0) {
-                                $no = 1;
                                 while ($data = mysqli_fetch_array($query)) {
                                     ?>
                                     <tr>
@@ -113,7 +125,7 @@
                                             <?php echo $data["nama_supplier"] ?>
                                         </td>
                                         <td> <a href="hapus.php?id=<?php echo $data["id"] ?>" class="label label-danger">
-                                                Delete </a> &nbsp; <a href="edit.php?id=<?php echo $data["id"] ?>"
+                                                Hapus </a> &nbsp; <a href="edit.php?id=<?php echo $data["id"] ?>"
                                                 class="label label-warning"> Ubah </a></td>
                                     </tr>
                                 <?php } ?>
@@ -123,16 +135,7 @@
                 </div>
             </div>
         </div>
-        <footer class="main-footer">
-            <div class="float-right d-none d-sm-inline">
-                ADMIN
-            </div>
-        </footer>
     </div>
-    <!-- Tautan JS AdminLTE -->
-    <!-- <script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
-    <script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://adminlte.io/themes/v3/dist/js/adminlte.min.js"></script> -->
 </body>
 
 </html>

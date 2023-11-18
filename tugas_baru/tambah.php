@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Customer</title>
+    <title>Tambah Data Cake</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script>
         function validateForm() {
@@ -27,7 +27,7 @@
     <style>
         body {
             padding: 50px;
-            background-color: lightblue;
+            background-color: lightgrey;
         }
 
         h1 {
@@ -38,11 +38,11 @@
 </head>
 
 <body>
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <a class="btn btn-success" style="margin-bottom:5px; margin-top:20px;" href="admin.php"> Kembali </a>
-                <h1 style="margin-bottom:5px">Tambah Data</h1>
+                <h1 style="margin-bottom:5px">Tambah Data Cake</h1>
                 <?php
                 include 'koneksi.php';
                 ?>
@@ -68,7 +68,6 @@
                         <label for="kategori_id">Kategori:</label>
                         <select name="kategori_id" id="kategori_id">
                             <?php
-                            // Fetch data from the "items" table
                             $query = mysqli_query($conn, "SELECT * FROM kategori");
                             if (mysqli_num_rows($query) > 0) {
                                 while ($data = mysqli_fetch_array($query)) {
@@ -85,7 +84,6 @@
                         <label for="supplier_id">Supplier:</label>
                         <select name="supplier_id" id="supplier_id">
                             <?php
-                            // Fetch data from the "items" table
                             $query = mysqli_query($conn, "SELECT * FROM supplier");
                             if (mysqli_num_rows($query) > 0) {
                                 while ($data = mysqli_fetch_array($query)) {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2023 at 07:09 AM
+-- Generation Time: Nov 18, 2023 at 06:22 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -84,7 +84,12 @@ CREATE TABLE `varian` (
 --
 
 INSERT INTO `varian` (`id`, `kategori_id`, `supplier_id`, `nama_varian`, `gambar`, `harga`, `stok`) VALUES
-(4, 1, 1, 'Brownies Amanda Strawberi', 'image/amanda-str.jfif', '40000.00', 50);
+(4, 1, 1, 'Brownies Amanda Strawberi', 'image/amanda-str.jfif', '40000.00', 50),
+(14, 3, 2, 'Bolu Gulung Selai Berry', 'image/bl-gulung.jpeg', '40000.00', 30),
+(15, 2, 2, 'Bolu Ulang Tahun Coklat', 'image/bl-ultah.jfif', '80000.00', 15),
+(17, 1, 1, 'Bolu Susu Lembang Keju', 'image/bsl-kj.jfif', '40000.00', 27),
+(18, 1, 2, 'Bolu Gulung Berry', 'image/bl-gulung-2.jfif', '35000.00', 15),
+(19, 1, 3, 'Bolu Pandan', 'image/b-kukus-pandan.jpeg', '40000.00', 25);
 
 --
 -- Indexes for dumped tables
@@ -130,7 +135,7 @@ ALTER TABLE `supplier`
 -- AUTO_INCREMENT for table `varian`
 --
 ALTER TABLE `varian`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables
